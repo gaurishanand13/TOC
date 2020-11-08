@@ -1,4 +1,5 @@
 package com.example.tocproject
+import android.util.Log
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 
@@ -8,7 +9,8 @@ object regexFunctions {
      * Accepts data in format "dd/mm/yyyy"
      */
     fun isValidDate(d: String?): Boolean {
-        val regex = ("^(1[0-2]|0[1-9])/(3[01]" + "|[12][0-9]|0[1-9])/[0-9]{4}$")
+        Log.i("tagg",d!!)
+        val regex = ("\\d{4}-\\d{2}-\\d{2}")
         val pattern: Pattern = Pattern.compile(regex)
         val matcher: Matcher = pattern.matcher(d as CharSequence?)
         return matcher.matches()
@@ -180,6 +182,162 @@ object regexFunctions {
         val p = Pattern.compile("(0/91)?[7-9][0-9]{9}")
         val m = p.matcher(s)
         return m.find() && m.group() == s
+    }
+
+
+
+    /**
+     * Valid Indian Passport Number rules -
+     * 1) It should be eight characters long.
+     * 2) The first character should be an upper case alphabet.
+     * 3) The next two characters should be a number, but the first character should be any number from 1-9 and the second character should be any number from 0-9.
+     * 4) It should be zero or one white space character.
+     * 5) The next four characters should be any number from 0-9.
+     * 6) The last character should be any number from 1-9.
+     */
+    fun isValidIndianPassportNo(str: String?): Boolean {
+
+        val regex = ("^[A-PR-WYa-pr-wy][1-9]\\d" + "\\s?\\d{4}[1-9]$")
+
+        val p = Pattern.compile(regex)
+        if (str == null) {
+            return false
+        }
+        val m = p.matcher(str)
+        return m.matches()
+    }
+
+
+
+    /**
+     * Valid Visa Card Number
+     * 1) It should be 13 or 16 digits long, new cards have 16 digits and old cards have 13 digits.
+     * 2) It should be starts with 4.
+     * 3) If the cards have 13 digits the next twelve digits should be any number between 0-9.
+     * 4) If the cards have 16 digits the next fifteen digits should be any number between 0-9.
+     * 5) It should not contains any alphabets and special characters.
+     */
+    fun isValidVisaCardNo(str: String?): Boolean {
+        val regex = "^4[0-9]{12}(?:[0-9]{3})?$"
+        val p = Pattern.compile(regex)
+        if (str == null) {
+            return false
+        }
+        val m = p.matcher(str)
+        return m.matches()
+    }
+
+
+
+    /**
+     * "000.12.12.034" is a valid IP address ,
+     * "000.12.234.23.23" and  "I.Am.not.an.ip" is not a IP address
+     */
+    fun isValidIPAddress(ip: String?): Boolean {
+        val zeroTo255 = ("(\\d{1,2}|(0|1)\\" + "d{2}|2[0-4]\\d|25[0-5])")
+        val regex = (zeroTo255 + "\\."
+                + zeroTo255 + "\\."
+                + zeroTo255 + "\\."
+                + zeroTo255)
+
+        val p = Pattern.compile(regex)
+        if (ip == null) {
+            return false
+        }
+        val m = p.matcher(ip)
+        return m.matches()
+    }
+
+
+
+    /**
+     * Valid MAC Address
+     * 1) It must contain 12 hexadecimal digits.
+     * 2) One way to represent them is to form six pairs of the characters separated with a hyphen (-) or colon(:). For example, 01-23-45-67-89-AB is a valid MAC address.
+     * 3) Another way to represent them is to form three groups of four hexadecimal digits separated by dots(.). For example, 0123.4567.89AB is a valid MAC address.
+     */
+    fun isValidMACAddress(str: String?): Boolean {
+        val regex = ("^([0-9A-Fa-f]{2}[:-])" + "{5}([0-9A-Fa-f]{2})|" + "([0-9a-fA-F]{4}\\."
+                + "[0-9a-fA-F]{4}\\." + "[0-9a-fA-F]{4})$")
+        val p = Pattern.compile(regex)
+        if (str == null) {
+            return false
+        }
+        val m = p.matcher(str)
+        return m.matches()
+    }
+
+
+    /**
+     * The valid pin code of India must satisfy the following conditions.
+     * 1) It can be only six digits.
+     * 2) It should not start with zero.
+     * 3) First digit of the pin code must be from 1 to 9.
+     * 4) Next five digits of the pin code may range from 0 to 9.
+     * 5) It should allow only one white space, but after three digits, although this is optional.
+     * "132103" is a valid pin code but “014205” , "1473598" are not valid ZIP Codes.
+     */
+     fun isValidPinCode(pinCode: String?): Boolean {
+        val regex = "^[1-9]{1}[0-9]{2}\\s{0,1}[0-9]{3}$"
+        val p = Pattern.compile(regex)
+        if (pinCode == null) {
+            return false
+        }
+        val m = p.matcher(pinCode)
+        return m.matches()
+    }
+
+
+    /**
+     * Tha valid IFSC (Indian Financial System) Code must satisfy the following conditions:
+     * 1) It should be 11 characters long.
+     * 2) The first four characters should be upper case alphabets.
+     * 3) The fifth character should be 0.
+     * 4) The last six characters usually numeric, but can also be alphabetic.
+     *
+     * E.g - "SBIN0125620" is a valid IFSC Code whereas "1234SBIN012" is not a valid IFSC Code.
+     */
+     fun isValidIFSCode(str: String?): Boolean {
+        val regex = "^[A-Z]{4}0[A-Z0-9]{6}$"
+        val p = Pattern.compile(regex)
+        if (str == null) {
+            return false
+        }
+        val m = p.matcher(str)
+        return m.matches()
+    }
+
+    /**
+     * The valid PAN Card number must satisfy the following conditions:
+     * 1) It should be ten characters long.
+     * 2) The first five characters should be any upper case alphabets.
+     * 3) The next four-characters should be any number from 0 to 9.
+     * 4) The last(tenth) character should be any upper case alphabet.
+     * 5) It should not contains any white spaces.
+     * e.g - "BNZAA2318J" is a valid pan card number wheras "23ZAABN18J" is not.
+     */
+     fun isValidPanCardNo(panCardNo: String?): Boolean {
+        val regex = "[A-Z]{5}[0-9]{4}[A-Z]{1}"
+        val p = Pattern.compile(regex)
+        if (panCardNo == null) {
+            return false
+        }
+        val m = p.matcher(panCardNo)
+        return m.matches()
+    }
+
+
+
+
+    fun isValidYoutubeVideoId(panCardNo: String?): Boolean {
+        //Just make sure that this regex expression is correct
+        val regex = "https?:\\/\\/(www\\.)?youtube.com\\/channel\\/UC([-_a-z0-9]{22})"
+        val p = Pattern.compile(regex)
+        if (panCardNo == null) {
+            return false
+        }
+        val m = p.matcher(panCardNo)
+        return m.matches()
     }
 
 }

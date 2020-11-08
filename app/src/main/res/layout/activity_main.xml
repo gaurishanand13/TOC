@@ -30,10 +30,11 @@
                 <TextView
                     android:textColor="@android:color/holo_blue_bright"
                     android:textSize="25sp"
-                    android:text="Date in format dd/mm/yyyy"
+                    android:text="Date in format YYYY-MM-DD"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <EditText
+                    android:id="@+id/validDate"
                     android:padding="5dp"
                     android:layout_marginTop="8dp"
                     android:background="#7b7474"
@@ -47,10 +48,10 @@
                     android:visibility="gone"
                     android:textColorHint="@android:color/white"
                     android:text=""
+                    android:id="@+id/validDateText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
-
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="8dp"
@@ -73,6 +74,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <EditText
+                    android:id="@+id/validHTML"
                     android:padding="5dp"
                     android:layout_marginTop="8dp"
                     android:background="#7b7474"
@@ -83,6 +85,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
+                    android:id="@+id/validHTMLText"
                     android:visibility="gone"
                     android:textColorHint="@android:color/white"
                     android:text=""
@@ -112,6 +115,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <EditText
+                    android:id="@+id/validURL"
                     android:padding="5dp"
                     android:layout_marginTop="8dp"
                     android:background="#7b7474"
@@ -122,6 +126,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
+                    android:id="@+id/validUTLText"
                     android:visibility="gone"
                     android:textColorHint="@android:color/white"
                     android:text=""
@@ -151,6 +156,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <EditText
+                    android:id="@+id/validAadharNumber"
                     android:padding="5dp"
                     android:layout_marginTop="8dp"
                     android:background="#7b7474"
@@ -161,6 +167,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
+                    android:id="@+id/validAadharNumberText"
                     android:visibility="gone"
                     android:textColorHint="@android:color/white"
                     android:text=""
@@ -190,6 +197,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <EditText
+                    android:id="@+id/validLicenseNumber"
                     android:padding="5dp"
                     android:layout_marginTop="8dp"
                     android:background="#7b7474"
@@ -200,13 +208,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
+                    android:id="@+id/validLicenseNumberText"
                     android:visibility="gone"
                     android:textColorHint="@android:color/white"
                     android:text=""
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
-
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="8dp"
@@ -229,6 +237,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <EditText
+                    android:id="@+id/isValidCVV"
                     android:padding="5dp"
                     android:layout_marginTop="8dp"
                     android:background="#7b7474"
@@ -239,14 +248,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
+                    android:id="@+id/isValidCVVText"
                     android:visibility="gone"
                     android:textColorHint="@android:color/white"
                     android:text=""
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
-
         </androidx.cardview.widget.CardView>
+
+
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="8dp"
             android:layout_marginLeft="8dp"
@@ -268,6 +279,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <EditText
+                    android:id="@+id/validTime"
                     android:padding="5dp"
                     android:layout_marginTop="8dp"
                     android:background="#7b7474"
@@ -278,6 +290,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
+                    android:id="@+id/validTimeText"
                     android:visibility="gone"
                     android:textColorHint="@android:color/white"
                     android:text=""
@@ -286,6 +299,7 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="8dp"
             android:layout_marginLeft="8dp"
@@ -307,6 +321,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <EditText
+                    android:id="@+id/validPhoneNumber"
                     android:padding="5dp"
                     android:layout_marginTop="8dp"
                     android:background="#7b7474"
@@ -317,6 +332,348 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
+                    android:id="@+id/validPhoneNumberText"
+                    android:visibility="gone"
+                    android:textColorHint="@android:color/white"
+                    android:text=""
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#3a3636"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <LinearLayout
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@android:color/holo_blue_bright"
+                    android:textSize="25sp"
+                    android:text="Indian Passport Number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/validIndianPassportNumber"
+                    android:padding="5dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#7b7474"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="15sp"
+                    android:hint="Text String"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/validIndianPassportNumberText"
+                    android:visibility="gone"
+                    android:textColorHint="@android:color/white"
+                    android:text=""
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#3a3636"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <LinearLayout
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@android:color/holo_blue_bright"
+                    android:textSize="25sp"
+                    android:text="Visa Card Number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/validVisaCardNumber"
+                    android:padding="5dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#7b7474"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="15sp"
+                    android:hint="Text String"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/validVisaCardNumberText"
+                    android:visibility="gone"
+                    android:textColorHint="@android:color/white"
+                    android:text=""
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#3a3636"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <LinearLayout
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@android:color/holo_blue_bright"
+                    android:textSize="25sp"
+                    android:text="IP Address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/validIPAddress"
+                    android:padding="5dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#7b7474"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="15sp"
+                    android:hint="Text String"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/validIPAddressText"
+                    android:visibility="gone"
+                    android:textColorHint="@android:color/white"
+                    android:text=""
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#3a3636"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <LinearLayout
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@android:color/holo_blue_bright"
+                    android:textSize="25sp"
+                    android:text="MAC Address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/validMacAddress"
+                    android:padding="5dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#7b7474"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="15sp"
+                    android:hint="Text String"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/validMacAddressText"
+                    android:visibility="gone"
+                    android:textColorHint="@android:color/white"
+                    android:text=""
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#3a3636"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <LinearLayout
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@android:color/holo_blue_bright"
+                    android:textSize="25sp"
+                    android:text="Indian Pin Code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/validPinCode"
+                    android:padding="5dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#7b7474"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="15sp"
+                    android:hint="Text String"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/validPinCodeText"
+                    android:visibility="gone"
+                    android:textColorHint="@android:color/white"
+                    android:text=""
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#3a3636"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <LinearLayout
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@android:color/holo_blue_bright"
+                    android:textSize="25sp"
+                    android:text="IFSC Code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/validIFSC"
+                    android:padding="5dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#7b7474"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="15sp"
+                    android:hint="Text String"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/validIFSCText"
+                    android:visibility="gone"
+                    android:textColorHint="@android:color/white"
+                    android:text=""
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#3a3636"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <LinearLayout
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@android:color/holo_blue_bright"
+                    android:textSize="25sp"
+                    android:text="Pan Number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/validPanNumber"
+                    android:padding="5dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#7b7474"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="15sp"
+                    android:hint="Text String"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/validPanNumberText"
+                    android:visibility="gone"
+                    android:textColorHint="@android:color/white"
+                    android:text=""
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#3a3636"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <LinearLayout
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@android:color/holo_blue_bright"
+                    android:textSize="25sp"
+                    android:text="Youtube Video's ID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/validYoutubeID"
+                    android:padding="5dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#7b7474"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/white"
+                    android:textSize="15sp"
+                    android:hint="Text String"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/validYoutubeIDText"
                     android:visibility="gone"
                     android:textColorHint="@android:color/white"
                     android:text=""
