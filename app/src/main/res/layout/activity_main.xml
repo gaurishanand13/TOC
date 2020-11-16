@@ -30,7 +30,7 @@
                 <TextView
                     android:textColor="@android:color/holo_blue_bright"
                     android:textSize="25sp"
-                    android:text="Date in format YYYY-MM-DD"
+                    android:text="Date in format DD/MM/YYYY"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <EditText
@@ -46,8 +46,10 @@
                     android:layout_height="wrap_content"/>
                 <TextView
                     android:visibility="gone"
+                    android:textColor="@android:color/white"
+                    android:padding="5dp"
                     android:textColorHint="@android:color/white"
-                    android:text=""
+                    android:text="Valid Date"
                     android:id="@+id/validDateText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
@@ -85,6 +87,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
+                    android:textColor="@android:color/white"
+                    android:padding="5dp"
                     android:id="@+id/validHTMLText"
                     android:visibility="gone"
                     android:textColorHint="@android:color/white"
@@ -126,6 +130,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
+                    android:textColor="@android:color/white"
+                    android:padding="5dp"
                     android:id="@+id/validUTLText"
                     android:visibility="gone"
                     android:textColorHint="@android:color/white"
@@ -167,6 +173,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
+                    android:textColor="@android:color/white"
+                    android:padding="5dp"
                     android:id="@+id/validAadharNumberText"
                     android:visibility="gone"
                     android:textColorHint="@android:color/white"
@@ -208,6 +216,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
+                    android:textColor="@android:color/white"
+                    android:padding="5dp"
                     android:id="@+id/validLicenseNumberText"
                     android:visibility="gone"
                     android:textColorHint="@android:color/white"
@@ -248,6 +258,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
+                    android:textColor="@android:color/white"
+                    android:padding="5dp"
                     android:id="@+id/isValidCVVText"
                     android:visibility="gone"
                     android:textColorHint="@android:color/white"
@@ -256,8 +268,6 @@
                     android:layout_height="wrap_content"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-
-
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="8dp"
             android:layout_marginLeft="8dp"
@@ -290,6 +300,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
+                    android:textColor="@android:color/white"
+                    android:padding="5dp"
                     android:id="@+id/validTimeText"
                     android:visibility="gone"
                     android:textColorHint="@android:color/white"
@@ -299,7 +311,6 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="8dp"
             android:layout_marginLeft="8dp"
@@ -332,6 +343,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
+                    android:textColor="@android:color/white"
+                    android:padding="5dp"
                     android:id="@+id/validPhoneNumberText"
                     android:visibility="gone"
                     android:textColorHint="@android:color/white"
@@ -341,7 +354,6 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="8dp"
             android:layout_marginLeft="8dp"
@@ -374,6 +386,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
+                    android:textColor="@android:color/white"
+                    android:padding="5dp"
                     android:id="@+id/validIndianPassportNumberText"
                     android:visibility="gone"
                     android:textColorHint="@android:color/white"
@@ -383,7 +397,6 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="8dp"
             android:layout_marginLeft="8dp"
@@ -416,6 +429,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
+                    android:textColor="@android:color/white"
+                    android:padding="5dp"
                     android:id="@+id/validVisaCardNumberText"
                     android:visibility="gone"
                     android:textColorHint="@android:color/white"
@@ -425,8 +440,6 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-
-
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="8dp"
             android:layout_marginLeft="8dp"
@@ -459,6 +472,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
+                    android:textColor="@android:color/white"
+                    android:padding="5dp"
                     android:id="@+id/validIPAddressText"
                     android:visibility="gone"
                     android:textColorHint="@android:color/white"
@@ -468,8 +483,6 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-
-
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="8dp"
             android:layout_marginLeft="8dp"
@@ -506,13 +519,13 @@
                     android:visibility="gone"
                     android:textColorHint="@android:color/white"
                     android:text=""
+                    android:textColor="@android:color/white"
+                    android:padding="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-
-
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="8dp"
             android:layout_marginLeft="8dp"
@@ -545,6 +558,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
+                    android:textColor="@android:color/white"
+                    android:padding="5dp"
                     android:id="@+id/validPinCodeText"
                     android:visibility="gone"
                     android:textColorHint="@android:color/white"
@@ -554,8 +569,6 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-
-
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="8dp"
             android:layout_marginLeft="8dp"
@@ -588,6 +601,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
+                    android:textColor="@android:color/white"
+                    android:padding="5dp"
                     android:id="@+id/validIFSCText"
                     android:visibility="gone"
                     android:textColorHint="@android:color/white"
@@ -595,10 +610,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
-
         </androidx.cardview.widget.CardView>
-
-
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="8dp"
             android:layout_marginLeft="8dp"
@@ -631,6 +643,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
+                    android:textColor="@android:color/white"
+                    android:padding="5dp"
                     android:id="@+id/validPanNumberText"
                     android:visibility="gone"
                     android:textColorHint="@android:color/white"
@@ -638,9 +652,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
-
         </androidx.cardview.widget.CardView>
-
         <androidx.cardview.widget.CardView
             app:cardCornerRadius="8dp"
             android:layout_marginLeft="8dp"
@@ -673,6 +685,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <TextView
+                    android:textColor="@android:color/white"
+                    android:padding="5dp"
                     android:id="@+id/validYoutubeIDText"
                     android:visibility="gone"
                     android:textColorHint="@android:color/white"
@@ -680,8 +694,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
-
         </androidx.cardview.widget.CardView>
     </LinearLayout>
-
 </androidx.core.widget.NestedScrollView>

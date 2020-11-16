@@ -6,11 +6,12 @@ import java.util.regex.Pattern
 object regexFunctions {
 
     /**
-     * Accepts data in format "dd/mm/yyyy"
+     * Accepts data in format "dd/mm/yyyy". Example -
+     * 23/11/199 is not a valid date, but 23/11/1999 is a valid date
      */
     fun isValidDate(d: String?): Boolean {
         Log.i("tagg",d!!)
-        val regex = ("\\d{4}-\\d{2}-\\d{2}")
+        val regex = "^(0?[1-9]|[12][0-9]|3[01])/(0?[1-9]|1[012])/((?:19|20)[0-9][0-9])$"
         val pattern: Pattern = Pattern.compile(regex)
         val matcher: Matcher = pattern.matcher(d as CharSequence?)
         return matcher.matches()
@@ -49,8 +50,9 @@ object regexFunctions {
      */
     fun isValidURL(url: String?): Boolean {
         // Regex to check valid URL
-        val regex = ("((http|https)://)(www.)?" + "[a-zA-Z0-9@:%._\\+~#?&//=]"
-                + "{2,256}\\.[a-z]" + "{2,6}\\b([-a-zA-Z0-9@:%" + "._\\+~#?&//=]*)")
+        val regex = "^((((https?|ftps?|gopher|telnet|nntp)://)|(mailto:|news:))" +
+                "(%[0-9A-Fa-f]{2}|[-()_.!~*';/?:@&=+$,A-Za-z0-9])+)" +
+                "([).!';/?:,][[:blank:]])?$"
 
         // Compile the ReGex
         val p = Pattern.compile(regex)
@@ -196,9 +198,8 @@ object regexFunctions {
      * 6) The last character should be any number from 1-9.
      */
     fun isValidIndianPassportNo(str: String?): Boolean {
-
-        val regex = ("^[A-PR-WYa-pr-wy][1-9]\\d" + "\\s?\\d{4}[1-9]$")
-
+//        val regex = ("^[A-PR-WYa-pr-wy][1-9]\\d" + "\\s?\\d{4}[1-9]$")
+        val regex = "^[A-Z][0-9]{7}$"
         val p = Pattern.compile(regex)
         if (str == null) {
             return false
@@ -206,7 +207,6 @@ object regexFunctions {
         val m = p.matcher(str)
         return m.matches()
     }
-
 
 
     /**
@@ -230,6 +230,9 @@ object regexFunctions {
 
 
     /**
+     * The IP address is a string in the form “A.B.C.D”, where the value of A, B, C, and D may range from 0 to 255.
+     * Leading zeros are allowed. The length of A, B, C, or D can’t be greater than 3.
+     *
      * "000.12.12.034" is a valid IP address ,
      * "000.12.234.23.23" and  "I.Am.not.an.ip" is not a IP address
      */
@@ -327,11 +330,10 @@ object regexFunctions {
     }
 
 
-
-
     fun isValidYoutubeVideoId(panCardNo: String?): Boolean {
         //Just make sure that this regex expression is correct
-        val regex = "https?:\\/\\/(www\\.)?youtube.com\\/channel\\/UC([-_a-z0-9]{22})"
+//        val regex = "https?:\\/\\/(www\\.)?youtube.com\\/channel\\/UC([-_a-z0-9]{22})"
+        val regex = "http(?:s)?:\\/\\/(?:m.)?(?:www\\.)?youtu(?:\\.be\\/|be\\.com\\/(?:watch\\?(?:feature=youtu.be\\&)?v=|v\\/|embed\\/|user\\/(?:[\\w#]+\\/)+))([^&#?\\n]+)"
         val p = Pattern.compile(regex)
         if (panCardNo == null) {
             return false

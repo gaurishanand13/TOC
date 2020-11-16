@@ -37,7 +37,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         })
-
         validHTML.addTextChangedListener(object : TextWatcher{
             override fun afterTextChanged(s: Editable?) {
 
@@ -53,16 +52,15 @@ class MainActivity : AppCompatActivity() {
                 else{
                     if(regexFunctions.isValidHTMLTag(s.toString())){
                         validHTMLText.visibility = View.VISIBLE
-                        validHTMLText.text = "Valid Date"
+                        validHTMLText.text = "Valid HTML Tag"
                     }
                     else{
                         validHTMLText.visibility = View.VISIBLE
-                        validHTMLText.text = "Not a Valid Date"
+                        validHTMLText.text = "Not a Valid HTML Tag"
                     }
                 }
             }
         })
-
         validURL.addTextChangedListener(object : TextWatcher{
             override fun afterTextChanged(s: Editable?) {
 
@@ -78,16 +76,15 @@ class MainActivity : AppCompatActivity() {
                 else{
                     if(regexFunctions.isValidURL(s.toString())){
                         validUTLText.visibility = View.VISIBLE
-                        validUTLText.text = "Valid Date"
+                        validUTLText.text = "Valid URL"
                     }
                     else{
                         validUTLText.visibility = View.VISIBLE
-                        validUTLText.text = "Not a Valid Date"
+                        validUTLText.text = "Not a Valid URL"
                     }
                 }
             }
         })
-
         validAadharNumber.addTextChangedListener(object : TextWatcher{
             override fun afterTextChanged(s: Editable?) {
 
@@ -103,16 +100,15 @@ class MainActivity : AppCompatActivity() {
                 else{
                     if(regexFunctions.isValidAadharNumber(s.toString())){
                         validAadharNumberText.visibility = View.VISIBLE
-                        validAadharNumberText.text = "Valid Date"
+                        validAadharNumberText.text = "Valid Aadhar Number"
                     }
                     else{
                         validAadharNumberText.visibility = View.VISIBLE
-                        validAadharNumberText.text = "Not a Valid Date"
+                        validAadharNumberText.text = "Not a valid Aadhar Number"
                     }
                 }
             }
         })
-
         validLicenseNumber.addTextChangedListener(object : TextWatcher{
             override fun afterTextChanged(s: Editable?) {
 
@@ -128,16 +124,15 @@ class MainActivity : AppCompatActivity() {
                 else{
                     if(regexFunctions.isValidLicenseNo(s.toString())){
                         validLicenseNumberText.visibility = View.VISIBLE
-                        validLicenseNumberText.text = "Valid Date"
+                        validLicenseNumberText.text = "Valid License Number"
                     }
                     else{
                         validLicenseNumberText.visibility = View.VISIBLE
-                        validLicenseNumberText.text = "Not a Valid Date"
+                        validLicenseNumberText.text = "Not a Valid License Number"
                     }
                 }
             }
         })
-
         isValidCVV.addTextChangedListener(object : TextWatcher{
             override fun afterTextChanged(s: Editable?) {
 
@@ -153,16 +148,15 @@ class MainActivity : AppCompatActivity() {
                 else{
                     if(regexFunctions.isValidCVVNumber(s.toString())){
                         isValidCVVText.visibility = View.VISIBLE
-                        isValidCVVText.text = "Valid Date"
+                        isValidCVVText.text = "Valid CVV"
                     }
                     else{
                         isValidCVVText.visibility = View.VISIBLE
-                        isValidCVVText.text = "Not a Valid Date"
+                        isValidCVVText.text = "Not a Valid CVV"
                     }
                 }
             }
         })
-
         validTime.addTextChangedListener(object : TextWatcher{
             override fun afterTextChanged(s: Editable?) {
 
@@ -178,16 +172,15 @@ class MainActivity : AppCompatActivity() {
                 else{
                     if(regexFunctions.isValidTime(s.toString())){
                         validTimeText.visibility = View.VISIBLE
-                        validTimeText.text = "Valid Date"
+                        validTimeText.text = "Valid Time"
                     }
                     else{
                         validTimeText.visibility = View.VISIBLE
-                        validTimeText.text = "Not a Valid Date"
+                        validTimeText.text = "Not a Valid Time"
                     }
                 }
             }
         })
-
         validPhoneNumber.addTextChangedListener(object : TextWatcher{
             override fun afterTextChanged(s: Editable?) {
 
@@ -203,16 +196,15 @@ class MainActivity : AppCompatActivity() {
                 else{
                     if(regexFunctions.isValidIndianNumber(s.toString())){
                         validPhoneNumberText.visibility = View.VISIBLE
-                        validPhoneNumberText.text = "Valid Date"
+                        validPhoneNumberText.text = "Valid Phone Number"
                     }
                     else{
                         validPhoneNumberText.visibility = View.VISIBLE
-                        validPhoneNumberText.text = "Not a Valid Date"
+                        validPhoneNumberText.text = "Not a Valid Phone Number"
                     }
                 }
             }
         })
-
         validIndianPassportNumber.addTextChangedListener(object : TextWatcher{
             override fun afterTextChanged(s: Editable?) {
 
@@ -228,16 +220,15 @@ class MainActivity : AppCompatActivity() {
                 else{
                     if(regexFunctions.isValidIndianPassportNo(s.toString())){
                         validIndianPassportNumberText.visibility = View.VISIBLE
-                        validIndianPassportNumberText.text = "Valid Date"
+                        validIndianPassportNumberText.text = "Valid Indian Passport Number"
                     }
                     else{
                         validIndianPassportNumberText.visibility = View.VISIBLE
-                        validIndianPassportNumberText.text = "Not a Valid Date"
+                        validIndianPassportNumberText.text = "Not a Valid Indian Passport Number"
                     }
                 }
             }
         })
-
         validVisaCardNumber.addTextChangedListener(object : TextWatcher{
             override fun afterTextChanged(s: Editable?) {
 
@@ -253,16 +244,15 @@ class MainActivity : AppCompatActivity() {
                 else{
                     if(regexFunctions.isValidVisaCardNo(s.toString())){
                         validVisaCardNumberText.visibility = View.VISIBLE
-                        validVisaCardNumberText.text = "Valid Date"
+                        validVisaCardNumberText.text = "Valid Visa Card Number"
                     }
                     else{
                         validVisaCardNumberText.visibility = View.VISIBLE
-                        validVisaCardNumberText.text = "Not a Valid Date"
+                        validVisaCardNumberText.text = "Not a Valid Visa Card Number"
                     }
                 }
             }
         })
-
         validIPAddress.addTextChangedListener(object : TextWatcher{
             override fun afterTextChanged(s: Editable?) {
 
@@ -278,17 +268,15 @@ class MainActivity : AppCompatActivity() {
                 else{
                     if(regexFunctions.isValidIPAddress(s.toString())){
                         validIPAddressText.visibility = View.VISIBLE
-                        validIPAddressText.text = "Valid Date"
+                        validIPAddressText.text = "Valid IP Address"
                     }
                     else{
                         validIPAddressText.visibility = View.VISIBLE
-                        validIPAddressText.text = "Not a Valid Date"
+                        validIPAddressText.text = "Not a Valid IP Address"
                     }
                 }
             }
         })
-
-
         validMacAddress.addTextChangedListener(object : TextWatcher{
             override fun afterTextChanged(s: Editable?) {
 
@@ -304,17 +292,15 @@ class MainActivity : AppCompatActivity() {
                 else{
                     if(regexFunctions.isValidMACAddress(s.toString())){
                         validMacAddressText.visibility = View.VISIBLE
-                        validMacAddressText.text = "Valid Date"
+                        validMacAddressText.text = "Valid Mac Address"
                     }
                     else{
                         validMacAddressText.visibility = View.VISIBLE
-                        validMacAddressText.text = "Not a Valid Date"
+                        validMacAddressText.text = "Not a Valid Mac Address"
                     }
                 }
             }
         })
-
-
         validPinCode.addTextChangedListener(object : TextWatcher{
             override fun afterTextChanged(s: Editable?) {
 
@@ -330,16 +316,15 @@ class MainActivity : AppCompatActivity() {
                 else{
                     if(regexFunctions.isValidPinCode(s.toString())){
                         validPinCodeText.visibility = View.VISIBLE
-                        validPinCodeText.text = "Valid Date"
+                        validPinCodeText.text = "Valid Pin Code"
                     }
                     else{
                         validPinCodeText.visibility = View.VISIBLE
-                        validPinCodeText.text = "Not a Valid Date"
+                        validPinCodeText.text = "Not a Valid Pin Code"
                     }
                 }
             }
         })
-
 
         validIFSC.addTextChangedListener(object : TextWatcher{
             override fun afterTextChanged(s: Editable?) {
@@ -356,11 +341,11 @@ class MainActivity : AppCompatActivity() {
                 else{
                     if(regexFunctions.isValidIFSCode(s.toString())){
                         validIFSCText.visibility = View.VISIBLE
-                        validIFSCText.text = "Valid Date"
+                        validIFSCText.text = "Valid IFSC Code"
                     }
                     else{
                         validIFSCText.visibility = View.VISIBLE
-                        validIFSCText.text = "Not a Valid Date"
+                        validIFSCText.text = "Not a Valid IFSC Code"
                     }
                 }
             }
@@ -382,11 +367,11 @@ class MainActivity : AppCompatActivity() {
                 else{
                     if(regexFunctions.isValidPanCardNo(s.toString())){
                         validPanNumberText.visibility = View.VISIBLE
-                        validPanNumberText.text = "Valid Date"
+                        validPanNumberText.text = "Valid Pan Number"
                     }
                     else{
                         validPanNumberText.visibility = View.VISIBLE
-                        validPanNumberText.text = "Not a Valid Date"
+                        validPanNumberText.text = "Not a Valid Pan Number"
                     }
                 }
             }
@@ -407,11 +392,11 @@ class MainActivity : AppCompatActivity() {
                 else{
                     if(regexFunctions.isValidYoutubeVideoId(s.toString())){
                         validYoutubeIDText.visibility = View.VISIBLE
-                        validYoutubeIDText.text = "Valid Date"
+                        validYoutubeIDText.text = "Valid Youtube ID"
                     }
                     else{
                         validYoutubeIDText.visibility = View.VISIBLE
-                        validYoutubeIDText.text = "Not a Valid Date"
+                        validYoutubeIDText.text = "Not a Valid Youtube ID"
                     }
                 }
             }
